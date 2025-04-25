@@ -1,5 +1,9 @@
+```python
+Developed By  :  GURUSHARAN S
+Register No   :  212224060088
+Module No     :  C Module 7
+```
 EXP NO:1 C PROGRAM FOR ARRAY OF STRUCTURE TO CHECK ELIGIBILITY FOR THE VACCINE.
-
 Aim:
 To write a C program for array of structure to check eligibility for the vaccine person age above 6 years of age.
 
@@ -15,17 +19,51 @@ Else
 6.	Return 0
  
 Program:
+```python
+#include <stdio.h>
+struct eligible {
+    int age;
+    char name[50];
+};
 
-//type your code here
+int main() {
+    int i, n;
+    
+    printf("Enter the number of people: ");
+    scanf("%d", &n);
+    struct eligible e[n];
 
+    for (i = 0; i < n; i++) {
+        printf("\nEnter name of person %d: ", i + 1);
+        scanf("%s", e[i].name);
+
+        printf("Enter age of person %d: ", i + 1);
+        scanf("%d", &e[i].age);
+    }
+
+    printf("\n--- Vaccine Eligibility Results ---\n");
+    for (i = 0; i < n; i++) {
+        printf("\nName: %s\n", e[i].name);
+        printf("Age: %d\n", e[i].age);
+
+        if (e[i].age > 6) {
+            printf("Vaccine Eligibility: Yes\n");
+        } else {
+            printf("Vaccine Eligibility: No\n");
+        }
+    }
+
+    return 0;
+}
+```
 
 Output:
 
-//paste your output here
-
+![image](https://github.com/user-attachments/assets/1da60ea2-a978-4a27-9f16-7c1b19f04d23)
 
 Result:
 Thus, the program is verified successfully. 
+
 
 
 
@@ -43,22 +81,46 @@ Algorithm:
 7.	Return 0
  
 Program:
+```python
+#include <stdio.h>
+struct numbers {
+    int a;
+    int b;
+};
 
-//type your code here
+struct numbers add(struct numbers n) {
+    struct numbers result;
+    result.a = n.a + n.b;
+    result.b = 0; 
+    return result;
+}
 
+int main() {
+    struct numbers n, sum;
+
+    printf("Enter value for a: ");
+    scanf("%d", &n.a);
+
+    printf("Enter value for b: ");
+    scanf("%d", &n.b);
+    sum = add(n);
+
+    printf("Sum of a and b: %d\n", sum.a);
+
+    return 0;
+}
+```
 
 
 
 Output:
 
-
-//paste your output here
-
-
+![image](https://github.com/user-attachments/assets/fd84349d-d269-478a-893d-fb9eb7682316)
 
 
 Result:
 Thus, the program is verified successfully
+
 
 
  
@@ -85,30 +147,37 @@ Use scanf to input the file name into the name array.
 5.	Return 0 to indicate successful program execution.
  
 Program:
-
-//type your code here
-
+```python
+#include <stdio.h>
+int main()
+{
+    char name[50];
+    scanf("%s",name);
+    FILE *fp;
+    fp=fopen("Employee.txt","w");
+    if(fp != NULL)
+    {
+        printf("%s File Created Successfully\n",name);
+        printf("%s File Opened\n",name);
+    }
+    if(fp)
+    {
+        fclose(fp);
+        printf("%s File Closed",name);
+    }
+}
+```
 
 
 
 Output:
 
-
-//paste your output here
-
-
-
-
-
-
-
-
-
-
+![WhatsApp Image 2025-04-25 at 14 12 11_8178ae30](https://github.com/user-attachments/assets/6bfb6378-02d5-4459-ac53-c246ed72616e)
 
 Result:
 Thus, the program is verified successfully
  
+
 
 
 EXP NO:4   PROGRAM TO READ A FILE NAME FROM USER, WRITE THAT FILE AND INSERT TEXT IN TO THAT FILE
@@ -132,24 +201,43 @@ Use scanf to input the file name into the name array and the number of strings i
 5.	Return 0 to indicate successful program execution.
  
 Program:
-
-//type your code here
-
-
+```python
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    FILE*p;
+    char n[50];
+    scanf("%s",n);
+    p = fopen(n, "w");
+    if(p == NULL)
+        printf("File Not Created");
+    
+    else
+    {
+        printf("%s Opened",n);
+        int a;
+        scanf("%d",&a);
+        for(int i=0;i<a;i++)
+        {
+            char b[50];
+            scanf("%[^\n]s",b);
+            fprintf(p,"%s",b);
+        }
+    }
+    fclose(p);
+    printf("\nData added Successfully");
+}
+```
 
 
 Output:
 
-
-//paste your output here
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/09bbcc95-37a7-4861-801b-4beb2f46b5d5)
 
 Result:
 Thus, the program is verified successfully
+
 
 
 
@@ -186,21 +274,52 @@ Algorithm:
 13.End the program by returning 0.
 
 Program:
+```python
+#include <stdio.h>
+#include <stdlib.h>
 
-//type your code here
+struct Subject {
+    char name[50];
+    int marks;
+};
 
+int main() {
+    struct Subject *s;
+    int n, i;
+    printf("Enter the number of subjects: ");
+    scanf("%d", &n);
 
+    s = (struct Subject*)malloc(n * sizeof(struct Subject));
+
+    if (s == NULL) {
+        printf("Memory allocation failed!\n");
+        return 1; 
+    }
+
+    for (i = 0; i < n; i++) {
+        printf("\nEnter name of subject %d: ", i + 1);
+        scanf("%s", s[i].name);
+        printf("Enter marks for %s: ", s[i].name);
+        scanf("%d", &s[i].marks);
+    }
+
+  
+    printf("\n--- Subject Details ---\n");
+    for (i = 0; i < n; i++) {
+        printf("Subject %d: %s\n", i + 1, s[i].name);
+        printf("Marks     : %d\n", s[i].marks);
+    }
+
+    free(s);
+
+    return 0;
+}
+```
 
 
 Output:
 
-
-//paste your output here
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/41847274-6ac9-42c0-a552-1df217553056)
 
 Result:
 Thus, the program is verified successfully
