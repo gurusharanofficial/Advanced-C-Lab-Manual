@@ -58,12 +58,12 @@ int main() {
 ```
 
 Output:
+
 ![image](https://github.com/user-attachments/assets/1da60ea2-a978-4a27-9f16-7c1b19f04d23)
-
-
 
 Result:
 Thus, the program is verified successfully. 
+
 
 
 
@@ -114,11 +114,13 @@ int main() {
 
 
 Output:
+
 ![image](https://github.com/user-attachments/assets/fd84349d-d269-478a-893d-fb9eb7682316)
 
 
 Result:
 Thus, the program is verified successfully
+
 
 
  
@@ -169,12 +171,13 @@ int main()
 
 
 Output:
-![WhatsApp Image 2025-04-25 at 14 12 11_8178ae30](https://github.com/user-attachments/assets/6bfb6378-02d5-4459-ac53-c246ed72616e)
 
+![WhatsApp Image 2025-04-25 at 14 12 11_8178ae30](https://github.com/user-attachments/assets/6bfb6378-02d5-4459-ac53-c246ed72616e)
 
 Result:
 Thus, the program is verified successfully
  
+
 
 
 EXP NO:4   PROGRAM TO READ A FILE NAME FROM USER, WRITE THAT FILE AND INSERT TEXT IN TO THAT FILE
@@ -229,10 +232,12 @@ int main()
 
 
 Output:
+
 ![image](https://github.com/user-attachments/assets/09bbcc95-37a7-4861-801b-4beb2f46b5d5)
 
 Result:
 Thus, the program is verified successfully
+
 
 
 
@@ -313,6 +318,7 @@ int main() {
 
 
 Output:
+
 ![image](https://github.com/user-attachments/assets/41847274-6ac9-42c0-a552-1df217553056)
 
 Result:
