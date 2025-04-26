@@ -15,22 +15,38 @@ Algorithm:
 4.	Exit the program.
  
 Program:
+...python
+#include <stdio.h>
 
-//type your code here
-
-
-
-
+int main() {
+    int n;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    if (n < 0) {
+        printf("Invalid input: Please enter a non-negative number.\n");
+        return 1; 
+    }
+    switch (n) {
+        case 5:
+            printf("seventy one\n");
+            break;
+        case 6:
+            printf("seventy two\n");
+            break;
+        case 13:
+            printf("seventy three\n");
+            break;
+        case 14:
+            printf("seventy four\n");
+            break;
+        case 15:
+            printf("seventy five\n");
+            break;
+        case 16:
+            printf("seventy six\n");
+            break;
 Output:
-
-
-//paste your output here
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/be56bc15-a11c-4d3c-959c-a79557182b0c)
 Result:
 Thus, the program is verified successfully
  
@@ -46,22 +62,28 @@ Algorithm:
 6.	End
  
 Program:
-
-//type your code here
-
-
-
-
+...python
+#include <stdio.h>
+int main() {
+    char a[50];
+    int h, c, i;
+    printf("Enter the string (digits only): ");
+    scanf("%s", a);
+    for (h = 0; h <= 9; h++) {
+        c = 0; 
+        for (i = 0; a[i] != '\0'; i++) {
+            if (a[i] == h + '0') { 
+                c++;
+            }
+        }
+        printf("%d ", c); 
+    }
+    printf("\n");
+    return 0;
+}
+...
 Output:
-
-
-//paste your output here
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/5def5cde-4227-4242-b6d7-0f756149161a)
 Result:
 Thus, the program is verified successfully
 
@@ -83,22 +105,58 @@ Free the memory allocated for each string in s Free the memory allocated for s
 7.	End
  
 Program:
-
-//type your code here
-
-
-
-
+...python
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+void swap(char *x, char *y) {
+    char temp = *x;
+    *x = *y;
+    *y = temp;
+}
+void reverse(char *str, int start, int end) {
+    while (start < end) {
+        swap(&str[start], &str[end]);
+        start++;
+        end--;
+    }
+}
+int nextPermutation(char *str) {
+    int i = strlen(str) - 2;
+    while (i >= 0 && str[i] >= str[i + 1])
+        i--;
+    if (i < 0)
+        return 0;
+    int j = strlen(str) - 1;
+    while (str[j] <= str[i])
+        j--;
+    swap(&str[i], &str[j]);
+    reverse(str, i + 1, strlen(str) - 1);
+    return 1;
+}
+int compareChars(const void *a, const void *b) {
+    return (*(char *)a - *(char *)b);
+}
+int main() {
+    char *s;
+    int n;
+    s = (char *)malloc(100 * sizeof(char));
+    if (s == NULL) {
+        printf("Memory allocation failed.\n");
+        return 1;
+    }
+    printf("Enter the string: ");
+    scanf("%s", s);
+    qsort(s, strlen(s), sizeof(char), compareChars);
+    do {
+        printf("%s\n", s);
+    } while (nextPermutation(s));
+    free(s);
+    return 0;
+}
+...
 Output:
-
-
-//paste your output here
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/2b2b5b18-22b4-4634-ad0e-4d75245c78ed)
 Result:
 Thus, the program is verified successfully
  
@@ -116,21 +174,28 @@ Algorithm:
 7.	End
  
 Program:
-
-//type your code here
-
-
-
-
+...python
+#include<stdio.h>
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    int l=n*2-1;
+    for(int i=0;i<l;i++)
+    {
+        for(int j=0;j<l;j++)
+        {
+            int min=i<j ? i :j;
+            min=min<l-i ? min:l-i-1;
+            min=min< l-j-1 ?min: l-j-1;
+            printf("%d ",n-min);
+        }
+        printf("\n");
+    }
+}
+...
 Output:
-
-
-//paste your output here
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/143cbe47-df3f-4e4e-8ed7-f2e2c71bf481)
 
 Result:
 Thus, the program is verified successfully
@@ -155,22 +220,24 @@ o	Call the square() function and display the result.
 5.	End.
 
 Program:
-
-//type your code here
-
-
-
-
+...python
+#include <stdio.h>
+int square() {
+    int num, result;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    result = num * num;
+    return result;     
+}
+int main() {
+    int sq;
+    sq = square();
+    printf("Square of the number is: %d\n", sq);
+    return 0;
+}
+...
 Output:
-
-
-//paste your output here
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/ac95ed33-1260-4fe4-b786-da61bf18ade4)
 Result:
 Thus, the program is verified successfully
 
