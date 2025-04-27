@@ -33,6 +33,14 @@ void display()
 ```
 Output:
 
+
+
+
+
+
+
+
+
 ![image](https://github.com/user-attachments/assets/dfcdefc2-8aa2-47a3-862b-550efde692ce)
 
 
@@ -76,6 +84,14 @@ void pop()
 }
 ```
 Output:
+
+
+
+
+
+
+
+
 
 ![image](https://github.com/user-attachments/assets/11f34c24-22d0-460f-b1dd-bab0283dbd69)
 
@@ -123,6 +139,14 @@ void display()
 }
 ```
 Output:
+
+
+
+
+
+
+
+
 ![image](https://github.com/user-attachments/assets/3cfdfb83-258a-4b26-baf5-16efc62179d6)
 
 
@@ -171,6 +195,15 @@ void enqueue(double data)
 
 ```
 Output:
+
+
+
+
+
+
+
+
+
 ![image](https://github.com/user-attachments/assets/51adcb10-c8ec-4182-a629-971635f97c2f)
 
 
@@ -241,6 +274,19 @@ int main() {
 }
 ```
 Output:
+
+
+
+
+
+
+
+
+
+
+
+
+
 ![image](https://github.com/user-attachments/assets/91840753-fb13-4300-9174-e2613f877ede)
 
 
