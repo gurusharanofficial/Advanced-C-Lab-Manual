@@ -43,9 +43,9 @@ Output:
 
 ![image](https://github.com/user-attachments/assets/dfcdefc2-8aa2-47a3-862b-550efde692ce)
 
-
-
 Result:
+
+
 Thus, the program to display stack elements using linked list is verified successfully. 
 
 
@@ -95,10 +95,9 @@ Output:
 
 ![image](https://github.com/user-attachments/assets/11f34c24-22d0-460f-b1dd-bab0283dbd69)
 
-
-
-
 Result:
+
+
 Thus, the program to pop an element from the given stack using liked list is verified successfully.
 
  
@@ -149,9 +148,9 @@ Output:
 
 ![image](https://github.com/user-attachments/assets/3cfdfb83-258a-4b26-baf5-16efc62179d6)
 
-
-
 Result:
+
+
 Thus, the program to display queue elements using linked list is verified successfully.
 
 
@@ -206,8 +205,9 @@ Output:
 
 ![image](https://github.com/user-attachments/assets/51adcb10-c8ec-4182-a629-971635f97c2f)
 
-
 Result:
+
+
 Thus, the program to insert elements in queue using linked list is verified successfully.
 
 
@@ -289,10 +289,8 @@ Output:
 
 ![image](https://github.com/user-attachments/assets/91840753-fb13-4300-9174-e2613f877ede)
 
-
-
-
 Result:
+
 
 Thus, the program to retrieve the "peek" (the front element) of a queue implemented using a linked list is verified successfully.
 
