@@ -44,6 +44,7 @@ void search(int data)
         printf("Item not found\n");
     }
 }
+
 '''
 
 Output:
