@@ -1,3 +1,8 @@
+```python
+Developed By  :  GURUSHARAN S
+Register No   :  212224060088
+Module No     :  C Module 10
+```
 EXP NO:16 C PROGRAM TO SEARCH A GIVEN ELEMENT IN THE GIVEN LINKED LIST.
 Aim:
 To write a C program to search a given element in the given linked list.
@@ -66,8 +71,7 @@ Algorithm:
 4.	Call the insert function and perform other linked list operations as needed.
  
 Program:
-...python
-
+```python
 struct Node{
     float data; 
     struct Node *next;
@@ -98,7 +102,7 @@ void insert(float data)
     temp->next= n;    
     
 }
-...
+```
 
 Output:
 
@@ -122,8 +126,7 @@ Algorithm:
 4.	Move to the next node by updating the temp pointer to point to the next node (temp = temp->next).
  
 Program:
-...python
-
+```python
 struct Node
 {
     struct Node *prev;
@@ -142,8 +145,7 @@ void display()
         ptr=ptr->next;
     }
 }
-
-...
+```
 Output:
 
 ![image](https://github.com/user-attachments/assets/53b988aa-95a1-4487-aad0-6dc280fb8c10)
@@ -166,8 +168,7 @@ Algorithm:
 5.	Set the new node's prev pointer to the last node and update the last node's next pointer to the new node.
  
 Program:
-...python
-
+```python
 struct Node
 {
     struct Node *prev;
@@ -211,8 +212,7 @@ void insert(int data)
        }
      //printf("\nnode inserted\n");
     }
-
-...
+```
 Output:
 
 ![image](https://github.com/user-attachments/assets/a6c1e68d-4715-4169-907e-1b8efc2572bb)
@@ -252,8 +252,7 @@ o	If the element is not found in any node, print a message indicating the elemen
 
 
 Program:
-...python
-
+```python
 #include <stdio.h>
 #include <stdlib.h>
 struct Node {
@@ -312,8 +311,7 @@ int main() {
     deleteNode(&head, 10);
     return 0;
 }
-...
-
+```
 Output:
 
 ![image](https://github.com/user-attachments/assets/9df7a60f-7566-4087-afb2-a701474ba168)
