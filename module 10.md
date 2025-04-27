@@ -10,6 +10,7 @@ Algorithm:
  
 Program:
 ...python
+
 struct Node{
     int data; 
     struct Node *next;
@@ -66,6 +67,7 @@ Algorithm:
  
 Program:
 ...python
+
 struct Node{
     float data; 
     struct Node *next;
@@ -121,6 +123,7 @@ Algorithm:
  
 Program:
 ...python
+
 struct Node
 {
     struct Node *prev;
@@ -164,6 +167,7 @@ Algorithm:
  
 Program:
 ...python
+
 struct Node
 {
     struct Node *prev;
@@ -249,6 +253,7 @@ o	If the element is not found in any node, print a message indicating the elemen
 
 Program:
 ...python
+
 #include <stdio.h>
 #include <stdlib.h>
 struct Node {
