@@ -1,5 +1,8 @@
-
-
+```python
+Developed By  :  GURUSHARAN S
+Register No   :  212224060088
+Module No     :  C Module 11
+```
 EXP NO:21 C PROGRAM TO CREATE A FUNCTION TO FIND THE GREATEST NUMBER
 Aim:
 To write a C program to create a function to find the greatest number
@@ -12,10 +15,31 @@ Algorithm:
 5.	Call the max_of_four function with the input integers and store the result in the greater variable
  
 Program:
-//type your code here
-
+```python
+#include<stdio.h>
+int add(int a,int b,int c,int d)
+{
+    if((a>b)&&(a>c)&&(a>d))
+      return a;
+    else if((b>c)&&(b>d))
+      return b;
+    else if(c>d)
+      return c;
+    else
+      return d;
+}
+int main()
+{
+    int a,b,c,d;
+    scanf("%d %d %d %d",&a,&b,&c,&d);
+    int max=add(a,b,c,d);
+    printf("%d",max);
+}
+```
 Output:
-//paste your output here
+
+![image](https://github.com/user-attachments/assets/9e2c14ad-66ed-4724-8d61-7c944c841fbd)
+
 
 Result:
 Thus, the program  that create a function to find the greatest number is verified successfully.
@@ -36,10 +60,44 @@ Algorithm:
 7.	Call the calculate_the_max function with input values.
  
 Program:
-//type your code here
+```python
+#include <stdio.h>
+void calculate_the_max(int n, int k) {
+    int a = 0; 
+    int o = 0; 
+    int x = 0; 
+    for (int i = 1; i <= n; i++) {
+        for (int j = i + 1; j <= n; j++) {
+            int and_val = i & j;
+            int or_val = i | j;
+            int xor_val = i ^ j;
+            if (and_val < k && and_val > a) {
+                a = and_val;
+            }
+            if (or_val < k && or_val > o) {
+                o = or_val;
+            }
+            if (xor_val < k && xor_val > x) {
+                x = xor_val;
+            }
+        }
+    }
+    printf("Maximum AND value: %d\n", a);
+    printf("Maximum OR value: %d\n", o);
+    printf("Maximum XOR value: %d\n", x);
+}
+int main() {
+    int n, k;
+    printf("Enter two integers n and k: ");
+    scanf("%d %d", &n, &k);
+    calculate_the_max(n, k);
+    return 0;
+}
+```
 
 Output:
-//paste your output here
+![image](https://github.com/user-attachments/assets/58171ded-a0ea-45ef-88f2-16accee06b48)
+
 
 Result:
 Thus, the program to print the maximum values for the AND, OR and XOR comparisons
@@ -59,10 +117,65 @@ Algorithm:
 5.	Use a for loop to iterate over the queries.
  
 Program:
-//type your code here
+```python
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    int noshel, noque;
+    printf("Enter number of shelves and queries: ");
+    scanf("%d %d", &noshel, &noque);
+    int** shelarr = (int**)malloc(noshel * sizeof(int*));
+    int* nobookarr = (int*)calloc(noshel, sizeof(int));
+    for (int i = 0; i < noshel; i++) {
+        shelarr[i] = NULL;
+    }
+    int k, c;
+    k = c = 0; 
+    for (int i = 0; i < noque; i++) {
+        int type_of_query;
+        printf("\nEnter query type (1 to add, 2 to get pages, 3 to get number of books): ");
+        scanf("%d", &type_of_query);
+        if (type_of_query == 1) {
+            int shelf, pages;
+            printf("Enter shelf index and number of pages: ");
+            scanf("%d %d", &shelf, &pages);
+            nobookarr[shelf] += 1; 
+            shelarr[shelf] = (int*)realloc(shelarr[shelf], nobookarr[shelf] * sizeof(int));
+            shelarr[shelf][nobookarr[shelf] - 1] = pages;
+        } else if (type_of_query == 2) {
+            int shelf, book;
+            printf("Enter shelf index and book index: ");
+            scanf("%d %d", &shelf, &book);
+            if (shelf < noshel && book < nobookarr[shelf]) {
+                printf("Number of pages: %d\n", shelarr[shelf][book]);
+            } else {
+                printf("Invalid shelf or book index!\n");
+            }
+        } else if (type_of_query == 3) {
+            int shelf;
+            printf("Enter shelf index: ");
+            scanf("%d", &shelf);
+            if (shelf < noshel) {
+                printf("Number of books on shelf %d: %d\n", shelf, nobookarr[shelf]);
+            } else {
+                printf("Invalid shelf index!\n");
+            }
+        } else {
+            printf("Invalid query type!\n");
+        }
+    }
+    for (int i = 0; i < noshel; i++) {
+        free(shelarr[i]);
+    }
+    free(shelarr);
+    free(nobookarr);
+    return 0;
+}
+```
 
 Output:
-//paste your output here
+![image](https://github.com/user-attachments/assets/d5a9bb7d-e252-4c92-949f-dd3151f8834c)
+
 
 
 Result:
@@ -86,10 +199,24 @@ Algorithm:
 
 
 Program:
-//type your code here
-
+```python
+#include <stdio.h>
+int main() {
+    int n, i, sum = 0;
+    printf("Enter the number of integers: ");
+    scanf("%d", &n);
+    int a[n];
+    printf("Enter %d integers:\n", n);
+    for (i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+        sum += a[i];
+    }
+    printf("Sum of the integers in the array: %d\n", sum);
+    return 0;
+}
+```
 Output:
-//paste your output here
+![image](https://github.com/user-attachments/assets/56994403-1158-439b-bd2c-c9b92f2d12d6)
 
  
 
@@ -100,8 +227,6 @@ Thus, the program prints the sum of the integers in the array is verified succes
 
  
 EXP NO 25: C PROGRAM TO COUNT THE NUMBER OF WORDS IN A      SENTENCE
-
-
 
 Aim:
 
@@ -120,10 +245,30 @@ o	If a character is not a space, it may belong to a word. If it's the first non-
 
 
 Program:
-//type your code here
-
+```python
+#include <stdio.h>
+#include <ctype.h> 
+int main() {
+    char sentence[1000];
+    int i = 0, words = 0;
+    int inWord = 0; 
+    printf("Enter a sentence: ");
+    fgets(sentence, sizeof(sentence), stdin);
+    while (sentence[i] != '\0') {
+        if (!isspace(sentence[i]) && inWord == 0) {
+            inWord = 1;
+            words++;
+        } else if (isspace(sentence[i])) {
+            inWord = 0;
+        }
+        i++;
+    }
+    printf("The number of words in the sentence: %d\n", words);
+    return 0;
+}
+```
 Output:
-//paste your output here
+![image](https://github.com/user-attachments/assets/9c861dd2-e52c-4acc-bccf-6e7e3475e630)
 
 
 
