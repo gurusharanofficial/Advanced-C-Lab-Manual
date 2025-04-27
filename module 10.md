@@ -9,9 +9,7 @@ Algorithm:
 4.	Call the search function and perform other linked list operations as needed.
  
 Program:
-
-'''python
-
+```python
 struct Node{
     int data; 
     struct Node *next;
@@ -45,8 +43,8 @@ void search(int data)
         printf("Item not found\n");
     }
 }
+```
 
-'''
 
 Output:
 ![image](https://github.com/user-attachments/assets/e3637622-c673-4574-b1ff-6d9677df2465)
