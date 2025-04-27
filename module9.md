@@ -1,7 +1,7 @@
 ```python
-Developed By  :  SANJAY M
-Register No   :  212223230187
-Module No     :  C Module 7
+Developed By  :  GURUSHARAN S
+Register No   :  212224060088
+Module No     :  C Module 9
 ```
 
 EXP NO:11 C PROGRAM TO DISPLAY STACK ELEMENTS USING AN ARRAY.
