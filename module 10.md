@@ -9,7 +9,7 @@ Algorithm:
 4.	Call the search function and perform other linked list operations as needed.
  
 Program:
-...python
+...python...
 
 struct Node{
     int data; 
