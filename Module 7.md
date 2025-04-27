@@ -4,6 +4,7 @@ Register No   :  212223230187
 Module No     :  C Module 7
 ```
 EXP NO:1 C PROGRAM FOR ARRAY OF STRUCTURE TO CHECK ELIGIBILITY FOR THE VACCINE.
+
 Aim:
 To write a C program for array of structure to check eligibility for the vaccine person age above 6 years of age.
 
@@ -21,49 +22,28 @@ Else
 Program:
 ```python
 #include <stdio.h>
-struct eligible {
+struct vaccine{
     int age;
-    char name[50];
+    char name[20];
 };
-
-int main() {
-    int i, n;
+int main(){
+    struct vaccine v;
+    scanf("%d",&v.age);
+    scanf("%s",v.name);
+    printf("Age:%d\n",v.age);
+    printf("Name:%svaccine:%d\n",v.name,v.age);
+    (v.age>18) ? printf("eligibility:yes"): printf("eligibility:no");
     
-    printf("Enter the number of people: ");
-    scanf("%d", &n);
-    struct eligible e[n];
-
-    for (i = 0; i < n; i++) {
-        printf("\nEnter name of person %d: ", i + 1);
-        scanf("%s", e[i].name);
-
-        printf("Enter age of person %d: ", i + 1);
-        scanf("%d", &e[i].age);
-    }
-
-    printf("\n--- Vaccine Eligibility Results ---\n");
-    for (i = 0; i < n; i++) {
-        printf("\nName: %s\n", e[i].name);
-        printf("Age: %d\n", e[i].age);
-
-        if (e[i].age > 6) {
-            printf("Vaccine Eligibility: Yes\n");
-        } else {
-            printf("Vaccine Eligibility: No\n");
-        }
-    }
-
-    return 0;
 }
 ```
-
 Output:
 
-![image](https://github.com/user-attachments/assets/1da60ea2-a978-4a27-9f16-7c1b19f04d23)
+![Screenshot 2025-04-26 092045](https://github.com/user-attachments/assets/da2b6ad1-3a0b-4569-b693-a7cfe6efa089)
+
+
 
 Result:
 Thus, the program is verified successfully. 
-
 
 
 
@@ -82,45 +62,31 @@ Algorithm:
  
 Program:
 ```python
-#include <stdio.h>
-struct numbers {
-    int a;
-    int b;
+#include<stdio.h>
+struct function
+{
+    int a,b;
+    
 };
-
-struct numbers add(struct numbers n) {
-    struct numbers result;
-    result.a = n.a + n.b;
-    result.b = 0; 
-    return result;
-}
-
-int main() {
-    struct numbers n, sum;
-
-    printf("Enter value for a: ");
-    scanf("%d", &n.a);
-
-    printf("Enter value for b: ");
-    scanf("%d", &n.b);
-    sum = add(n);
-
-    printf("Sum of a and b: %d\n", sum.a);
-
-    return 0;
+int main(){
+    struct function f;
+    scanf("%d%d",&f.a,&f.b);
+    printf("%d",f.a+f.b);
 }
 ```
 
 
 
+
 Output:
 
-![image](https://github.com/user-attachments/assets/fd84349d-d269-478a-893d-fb9eb7682316)
+
+
+![Screenshot 2025-04-26 092510](https://github.com/user-attachments/assets/741f4d1b-e8b3-4acc-834e-603dada2056a)
 
 
 Result:
 Thus, the program is verified successfully
-
 
 
  
@@ -149,35 +115,30 @@ Use scanf to input the file name into the name array.
 Program:
 ```python
 #include <stdio.h>
-int main()
-{
-    char name[50];
-    scanf("%s",name);
-    FILE *fp;
-    fp=fopen("Employee.txt","w");
-    if(fp != NULL)
-    {
-        printf("%s File Created Successfully\n",name);
-        printf("%s File Opened\n",name);
-    }
-    if(fp)
-    {
-        fclose(fp);
-        printf("%s File Closed",name);
-    }
+int main(){
+    FILE *fb;
+    char filename[20];
+    scanf("%s",filename);
+    fb=fopen(filename,"w");
+    printf("%s File Created Successfully\n",filename);
+    printf("%s File Opened\n",filename);
+    fclose(fb);
+    printf("%s File Closed",filename);
 }
 ```
 
 
 
+
 Output:
 
-![WhatsApp Image 2025-04-25 at 14 12 11_8178ae30](https://github.com/user-attachments/assets/6bfb6378-02d5-4459-ac53-c246ed72616e)
+
+![image](https://github.com/user-attachments/assets/b8af3af8-4da5-45aa-a153-c1e88940b42d)
+
 
 Result:
 Thus, the program is verified successfully
  
-
 
 
 EXP NO:4   PROGRAM TO READ A FILE NAME FROM USER, WRITE THAT FILE AND INSERT TEXT IN TO THAT FILE
@@ -203,41 +164,50 @@ Use scanf to input the file name into the name array and the number of strings i
 Program:
 ```python
 #include <stdio.h>
-#include <stdlib.h>
-int main()
-{
-    FILE*p;
-    char n[50];
-    scanf("%s",n);
-    p = fopen(n, "w");
-    if(p == NULL)
-        printf("File Not Created");
+
+int main() {
+    char filename[50];  
+    FILE *file;       
+    int n;              
+    char text[100];   
     
-    else
-    {
-        printf("%s Opened",n);
-        int a;
-        scanf("%d",&a);
-        for(int i=0;i<a;i++)
-        {
-            char b[50];
-            scanf("%[^\n]s",b);
-            fprintf(p,"%s",b);
-        }
+    scanf("%s", filename); 
+
+    file = fopen(filename, "w");
+    
+    if (file == NULL) {
+       
+        return 1;
     }
-    fclose(p);
-    printf("\nData added Successfully");
+    printf("%s Opened\n", filename);
+
+    scanf("%d", &n);
+    getchar(); 
+
+    for (int i = 0; i < n; i++) {
+        
+        fgets(text, sizeof(text), stdin);  
+        fprintf(file, "%s", text);        
+    }
+    fclose(file);
+    printf("Data added Successfully\n");
+
+    return 0;
 }
+
 ```
+
+
 
 
 Output:
 
-![image](https://github.com/user-attachments/assets/09bbcc95-37a7-4861-801b-4beb2f46b5d5)
+
+![Screenshot 2025-04-26 093005](https://github.com/user-attachments/assets/63bb5aa2-968b-4886-9284-e685545d25ee)
+
 
 Result:
 Thus, the program is verified successfully
-
 
 
 
@@ -274,52 +244,36 @@ Algorithm:
 13.End the program by returning 0.
 
 Program:
+
 ```python
-#include <stdio.h>
-#include <stdlib.h>
-
-struct Subject {
-    char name[50];
-    int marks;
+#include<stdio.h>
+struct employee
+{
+    char Name[20];
+    int  ID;
+    float Salary;
 };
+int main()
+{
+    struct employee a;
+    scanf("%s",a.Name);
+    scanf("%d",&a.ID);
+    scanf("%f",&a.Salary);
+    printf("Displaying Information:\n");
+    printf("Name: %s\n",a.Name);
+    printf("Roll number: %d\n",a.ID);
+    printf("Marks: %.1f",a.Salary);
+    
 
-int main() {
-    struct Subject *s;
-    int n, i;
-    printf("Enter the number of subjects: ");
-    scanf("%d", &n);
-
-    s = (struct Subject*)malloc(n * sizeof(struct Subject));
-
-    if (s == NULL) {
-        printf("Memory allocation failed!\n");
-        return 1; 
-    }
-
-    for (i = 0; i < n; i++) {
-        printf("\nEnter name of subject %d: ", i + 1);
-        scanf("%s", s[i].name);
-        printf("Enter marks for %s: ", s[i].name);
-        scanf("%d", &s[i].marks);
-    }
-
-  
-    printf("\n--- Subject Details ---\n");
-    for (i = 0; i < n; i++) {
-        printf("Subject %d: %s\n", i + 1, s[i].name);
-        printf("Marks     : %d\n", s[i].marks);
-    }
-
-    free(s);
-
-    return 0;
 }
 ```
 
 
 Output:
 
-![image](https://github.com/user-attachments/assets/41847274-6ac9-42c0-a552-1df217553056)
+
+![Screenshot 2025-04-26 093801](https://github.com/user-attachments/assets/4a26fe5b-aaa8-4911-b489-6e42b018299b)
+
 
 Result:
 Thus, the program is verified successfully
